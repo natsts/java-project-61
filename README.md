@@ -11,5 +11,8 @@ Mind Games is a set of five console games based on popular mobile brain training
 - **Finding the Greatest Common Divisor.**
 - **Definition of a prime number.**
 
-Game example "Determining an even number":
+**Game example Definition of an even number**:
 [![asciicast](https://asciinema.org/a/Noqs4poyswUYHG4PbtUJcuRnc.svg)](https://asciinema.org/a/Noqs4poyswUYHG4PbtUJcuRnc)
+
+**Game example Calculator. Arithmetic expressions to be evaluated**:
+[![asciicast](https://asciinema.org/a/XjpjP6eqO3dbMlwNKyYzX2KS3.svg)](https://asciinema.org/a/XjpjP6eqO3dbMlwNKyYzX2KS3)
