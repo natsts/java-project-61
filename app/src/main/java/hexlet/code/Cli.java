@@ -2,7 +2,7 @@ package hexlet.code;
 import java.util.Scanner;
 public class Cli {
     public static String userName;
-    private static Scanner scanner = new Scanner(System.in);
+    public static Scanner scanner = new Scanner(System.in);
 
     public static void helloUser() {
         System.out.print(

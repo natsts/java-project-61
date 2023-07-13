@@ -1,39 +1,33 @@
 package hexlet.code.games;
-import hexlet.code.Cli;
-import java.util.Scanner;
+import hexlet.code.Engine;
 
 public class Calc {
-    private static Scanner scanner = new Scanner(System.in);
+    public static String generateOperator() {
+        String[] operators = {"+", "-", "*"};
+        int n = (int) Math.floor(Math.random() * operators.length);
+        return operators[n];
+    }
 
-    public void calcGame() {
-        System.out.println("What is the result of the expression?");
+    public static int getCalculate(int x, int y, String operator) {
+        return switch (operator) {
+            case ("+") -> x + y;
+            case ("-") -> x - y;
+            case ("*") -> x * y;
+            default -> 1;
+        };
+    }
 
-        for (var i = 1; i <= 3;) {
+    public static void calculate() {
+        String description = "What is the result of the expression?";
+        String[][] array = new String[3][2];
+        for (var i = 0; i < 3; i++) {
             int x = (int) (Math.random() * (100 + 1));
             int y = (int) (Math.random() * (100 + 1));
-            int[] operations = {x - y, x + y, x * y};
-            int n = (int) Math.floor(Math.random() * operations.length);
-
-            if (x - y == operations[n]) {
-                System.out.println("Question: " + x + " - " + y);
-            } else if (x + y == operations[n]) {
-                System.out.println("Question: " + x + " + " + y);
-            } else if (x * y == operations[n]) {
-                System.out.println("Question: " + x + " * " + y);
-            }
-
-            System.out.print("Your answer: ");
-            String answer = scanner.next();
-            Integer newAnswer = Integer.valueOf(answer); //Получить ответ пользователь и преобразовать в целое число
-
-            if (newAnswer == operations[n]) {
-                System.out.println("Correct!");
-                i++;
-            } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + operations[n] + "'.\nLet's try again, " + Cli.getUserName() + "!");
-                return;
-            }
+            String operator = generateOperator();
+            int result = getCalculate(x, y, operator);
+            array[i][0] = x + " " + operator + " " + y;
+            array[i][1] = Integer.toString(result);
         }
-        System.out.println("Congratulations, " + Cli.getUserName() + "!");
+        Engine.run(array, description);
     }
 }
