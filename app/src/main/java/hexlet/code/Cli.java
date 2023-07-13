@@ -6,7 +6,8 @@ public class Cli {
 
     public static void helloUser() {
         System.out.print(
-                "Welcome to the Brain Games!" +
+                "Welcome to the Brain Games!"
+                        +
                 "\nMay I have your name? ");
         userName = scanner.next();
         System.out.println("Hello, " + userName + "!");
