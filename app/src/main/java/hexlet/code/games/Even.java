@@ -10,7 +10,7 @@ public class Even {
             array[i][0] = "Question: " + random;
             array[i][1] = getResult(random);
         }
-        Engine.run(array, description);
+        Engine.generalGameLogic(array, description);
     }
 
     public static boolean isEven(int number) {

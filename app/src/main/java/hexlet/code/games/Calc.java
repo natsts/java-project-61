@@ -28,6 +28,6 @@ public class Calc {
             array[i][0] = x + " " + operator + " " + y;
             array[i][1] = Integer.toString(result);
         }
-        Engine.run(array, description);
+        Engine.generalGameLogic(array, description);
     }
 }

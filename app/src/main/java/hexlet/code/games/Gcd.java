@@ -13,7 +13,7 @@ public class Gcd {
             array[i][0] = x + " " + y;
             array[i][1] = Integer.toString(result);
         }
-        Engine.run(array, description);
+        Engine.generalGameLogic(array, description);
     }
     public static int findDivisor(int x, int y) {
         int min = Math.min(x, y);
