@@ -2,7 +2,6 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Even {
-
     public static void even() {
         String description = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         String[][] array = new String[3][2];
