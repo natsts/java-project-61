@@ -22,3 +22,6 @@ Mind Games is a set of five console games based on popular mobile brain training
 
 **Progression. Search for missing numbers in a sequence of numbers.**
 [![asciicast](https://asciinema.org/a/jWcvJ4c9tR1sKpwJblALgKfnH.svg)](https://asciinema.org/a/jWcvJ4c9tR1sKpwJblALgKfnH)
+
+**Definition of a prime number.**
+[![asciicast](https://asciinema.org/a/xevlmmKHVuxYBA2ShJGFeAzvU.svg)](https://asciinema.org/a/xevlmmKHVuxYBA2ShJGFeAzvU)
