@@ -2,20 +2,28 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
+    public static final int NUMBER_OF_ROUND = 3;
+    public static final int QUESTION = 0;
+    public static final int CORRECT_ANSWER = 1;
+
     public static void generalGameLogic(String[][] gameData, String description) {
+
         Cli.helloUser();
         Scanner scanner = new Scanner(System.in);
         System.out.println(description);
 
-        for (var i = 0; i < 3;) {
-            System.out.println(gameData[i][0]);
+        for (var i = 0; i < NUMBER_OF_ROUND;) {
+
+            System.out.println(gameData[i][QUESTION]);
             System.out.print("Your answer: ");
-            String answer = scanner.next();
-            if (answer.equals(gameData[i][1])) {
+            String userAnswer = scanner.next();
+
+            if (userAnswer.equals(gameData[i][CORRECT_ANSWER])) {
                 System.out.println("Correct!");
                 i++;
             } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + gameData[i][1] + "'.\nLet's try again, " + Cli.getUserName() + "!");
+                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '"
+                        + gameData[i][CORRECT_ANSWER] + "'.\nLet's try again, " + Cli.getUserName() + "!");
                 return;
             }
         }

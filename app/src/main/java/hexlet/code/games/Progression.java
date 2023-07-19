@@ -1,18 +1,20 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
 import java.util.StringJoiner;
-
+import static hexlet.code.Engine.NUMBER_OF_ROUND;
+import static hexlet.code.Engine.QUESTION;
+import static hexlet.code.Engine.CORRECT_ANSWER;
 public class Progression {
-    private static final int progressionLength = (int)(Math.random()*((10-5)+1))+5;
-    private static final int[] numbers = new int[progressionLength];
+    private static final int LENGTH_OF_PROGRESSION = (int) (Math.random() * ((10 - 5) + 1)) + 5;
+    private static final int[] NUMBERS = new int[LENGTH_OF_PROGRESSION];
     private static String correct;
     public static void progression() {
         String description = "What number is missing in the progression?";
-        String[][] array = new String[3][2];
-        for (var i = 0; i < 3; i++) {
+        String[][] array = new String[NUMBER_OF_ROUND][2];
+        for (var i = 0; i < NUMBER_OF_ROUND; i++) {
             generateProgression();
-            array[i][0] = "Question: " + generateQuestion();
-            array[i][1] = correct;
+            array[i][QUESTION] = "Question: " + generateQuestion();
+            array[i][CORRECT_ANSWER] = correct;
         }
         Engine.generalGameLogic(array, description);
     }
@@ -22,19 +24,19 @@ public class Progression {
         int firstNumber = (int) (Math.random() * (10 + 1));
         int difference = (int) ((Math.random() + 1) * (10 + 1));
 
-        numbers[0] = firstNumber;
+        NUMBERS[0] = firstNumber;
 
-        for (var i = 1; i < progressionLength; i++) {
-            numbers[i] = numbers[i - 1] + difference;
+        for (var i = 1; i < LENGTH_OF_PROGRESSION; i++) {
+            NUMBERS[i] = NUMBERS[i - 1] + difference;
         }
     }
 
     public static String generateQuestion() {
-        var indexHideElement = (int) (Math.random() * progressionLength);
+        var indexHideElement = (int) (Math.random() * LENGTH_OF_PROGRESSION);
         var result = new StringJoiner(" ");
 
-        for (var i = 0; i < numbers.length; i++) {
-            var value = Integer.toString(numbers[i]);
+        for (var i = 0; i < NUMBERS.length; i++) {
+            var value = Integer.toString(NUMBERS[i]);
             if (i == indexHideElement) {
                 result.add("..");
                 correct = value;
