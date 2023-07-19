@@ -12,16 +12,31 @@ Mind Games is a set of five console games based on popular mobile brain training
 - **Definition of a prime number.**
 
 **Definition of an even number**:
-[![asciicast](https://asciinema.org/a/Noqs4poyswUYHG4PbtUJcuRnc.svg)](https://asciinema.org/a/Noqs4poyswUYHG4PbtUJcuRnc)
+- Successful outcome:
+[![asciicast](https://asciinema.org/a/dcvtZSdqtGlqEc4N4Gd6ERjxS.svg)](https://asciinema.org/a/dcvtZSdqtGlqEc4N4Gd6ERjxS)
+- Unsuccessful outcome:
+[![asciicast](https://asciinema.org/a/iGAerOHtCrFY7o3DCvgCJ5GMW.svg)](https://asciinema.org/a/iGAerOHtCrFY7o3DCvgCJ5GMW)
 
 **Calculator. Arithmetic expressions to be evaluated**:
-[![asciicast](https://asciinema.org/a/XjpjP6eqO3dbMlwNKyYzX2KS3.svg)](https://asciinema.org/a/XjpjP6eqO3dbMlwNKyYzX2KS3)
+- Successful outcome:
+[![asciicast](https://asciinema.org/a/1vZzuOENTbspYjeXBuVTNL1Vj.svg)](https://asciinema.org/a/1vZzuOENTbspYjeXBuVTNL1Vj)
+- Unsuccessful outcome:
+[![asciicast](https://asciinema.org/a/xC7DMPG0lilrKi8PJcnvqCEBL.svg)](https://asciinema.org/a/xC7DMPG0lilrKi8PJcnvqCEBL)
 
 **Finding the Greatest Common Divisor.**
-[![asciicast](https://asciinema.org/a/ksalQO9bhLRWdM84Xc6YP36bx.svg)](https://asciinema.org/a/ksalQO9bhLRWdM84Xc6YP36bx)
+- Successful outcome:
+[![asciicast](https://asciinema.org/a/KAFxMIHcOAOrDn9Dsf9keJS4C.svg)](https://asciinema.org/a/KAFxMIHcOAOrDn9Dsf9keJS4C)
+- Unsuccessful outcome:
+[![asciicast](https://asciinema.org/a/Adbc5AexnM8YMPlqusVVFn8R0.svg)](https://asciinema.org/a/Adbc5AexnM8YMPlqusVVFn8R0)
 
 **Progression. Search for missing numbers in a sequence of numbers.**
-[![asciicast](https://asciinema.org/a/jWcvJ4c9tR1sKpwJblALgKfnH.svg)](https://asciinema.org/a/jWcvJ4c9tR1sKpwJblALgKfnH)
+- Successful outcome:
+[![asciicast](https://asciinema.org/a/KfuvYfHHUZmg6IPgU5V3yE9Yo.svg)](https://asciinema.org/a/KfuvYfHHUZmg6IPgU5V3yE9Yo)
+- Unsuccessful outcome:
+[![asciicast](https://asciinema.org/a/QYarEcwvw383bwpPK1R3uaF4Q.svg)](https://asciinema.org/a/QYarEcwvw383bwpPK1R3uaF4Q)
 
 **Definition of a prime number.**
-[![asciicast](https://asciinema.org/a/xevlmmKHVuxYBA2ShJGFeAzvU.svg)](https://asciinema.org/a/xevlmmKHVuxYBA2ShJGFeAzvU)
+- Successful outcome:
+[![asciicast](https://asciinema.org/a/7msXNkXrWQK1uYDx2IOsiJAUt.svg)](https://asciinema.org/a/7msXNkXrWQK1uYDx2IOsiJAUt)
+- Unsuccessful outcome:
+[![asciicast](https://asciinema.org/a/8oFVmpVS3lV6Ej3hkMwjBIWx0.svg)](https://asciinema.org/a/8oFVmpVS3lV6Ej3hkMwjBIWx0)
