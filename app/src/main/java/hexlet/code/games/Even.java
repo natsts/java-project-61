@@ -6,12 +6,14 @@ import static hexlet.code.Engine.CORRECT_ANSWER;
 import static hexlet.code.Utils.getRandomInt;
 
 public class Even {
+    private static final int PROGRESSION_MIN_SIZE = 1;
+    private static final int PROGRESSION_MAX_SIZE = 100;
     public static void even() {
         String description = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         String[][] array = new String[NUMBER_OF_ROUND][2];
 
         for (var i = 0; i < NUMBER_OF_ROUND; i++) {
-            int random = getRandomInt(1, 100);
+            int random = getRandomInt(PROGRESSION_MIN_SIZE, PROGRESSION_MAX_SIZE);
             array[i][QUESTION] = String.valueOf(random);
             array[i][CORRECT_ANSWER] = getCorrectAnswer(random);
         }

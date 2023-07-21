@@ -8,12 +8,16 @@ import static hexlet.code.Utils.getLengthOfProgression;
 import static hexlet.code.Utils.getRandomInt;
 
 public class Progression {
-    private static final int LENGTH_OF_PROGRESSION = getLengthOfProgression(5, 10);
+    private static final int PROGRESSION_MIN_SIZE = 5;
+    private static final int PROGRESSION_MAX_SIZE = 10;
+    private static final String REPLACEMENT = "..";
+    private static final int LENGTH_OF_PROGRESSION = getLengthOfProgression(PROGRESSION_MIN_SIZE, PROGRESSION_MAX_SIZE);
     private static final int[] NUMBERS = new int[LENGTH_OF_PROGRESSION];
     private static String correct;
     public static void progression() {
         String description = "What number is missing in the progression?";
         String[][] array = new String[NUMBER_OF_ROUND][2];
+
         for (var i = 0; i < NUMBER_OF_ROUND; i++) {
             int firstNumber = getRandomInt(1, 100);
             int difference = getRandomInt(1, 100);
@@ -41,7 +45,7 @@ public class Progression {
         for (var i = 0; i < NUMBERS.length; i++) {
             var value = Integer.toString(NUMBERS[i]);
             if (i == indexHideElement) {
-                result.add("..");
+                result.add(REPLACEMENT);
                 correct = value;
             } else {
                 result.add(value);
