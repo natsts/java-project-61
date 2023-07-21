@@ -15,7 +15,7 @@ public class Calc {
             int y = getRandomInt();
             String operator = generateOperator();
             int result = calculate(x, y, operator);
-            array[i][QUESTION] = "Question: " + x + " " + operator + " " + y;
+            array[i][QUESTION] = x + " " + operator + " " + y;
             array[i][CORRECT_ANSWER] = Integer.toString(result);
         }
         Engine.generalGameLogic(array, description);

@@ -14,7 +14,7 @@ public class Gcd {
             int x = getRandomInt();
             int y = getRandomInt();
             int result = findDivisor(x, y);
-            array[i][QUESTION] = "Question: " + x + " " + y;
+            array[i][QUESTION] = x + " " + y;
             array[i][CORRECT_ANSWER] = Integer.toString(result);
         }
         Engine.generalGameLogic(array, description);

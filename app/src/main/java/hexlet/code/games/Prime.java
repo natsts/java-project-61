@@ -13,7 +13,7 @@ public class Prime {
 
         for (var i = 0; i < NUMBER_OF_ROUND; i++) {
             int number = getRandomInt();
-            array[i][QUESTION] = "Question: " + number;
+            array[i][QUESTION] = String.valueOf(number);
             array[i][CORRECT_ANSWER] = getCorrectAnswer(number);
         }
         Engine.generalGameLogic(array, description);

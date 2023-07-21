@@ -15,7 +15,7 @@ public class Progression {
         String[][] array = new String[NUMBER_OF_ROUND][2];
         for (var i = 0; i < NUMBER_OF_ROUND; i++) {
             generateProgression();
-            array[i][QUESTION] = "Question: " + generateQuestion();
+            array[i][QUESTION] = generateQuestion();
             array[i][CORRECT_ANSWER] = correct;
         }
         Engine.generalGameLogic(array, description);
@@ -25,7 +25,7 @@ public class Progression {
     public static void generateProgression() {
 
         int firstNumber = getRandomInt();
-        int difference = getRandomIntFromOne();
+        int difference = getRandomInt();
 
         NUMBERS[0] = firstNumber;
 

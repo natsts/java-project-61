@@ -12,7 +12,7 @@ public class Even {
 
         for (var i = 0; i < NUMBER_OF_ROUND; i++) {
             int random = getRandomInt();
-            array[i][QUESTION] = "Question: " + random;
+            array[i][QUESTION] = String.valueOf(random);
             array[i][CORRECT_ANSWER] = getCorrectAnswer(random);
         }
         Engine.generalGameLogic(array, description);
