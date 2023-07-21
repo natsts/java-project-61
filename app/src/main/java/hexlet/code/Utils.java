@@ -4,8 +4,6 @@ import java.util.Random;
 
 public class Utils {
 
-    public final int to = 100;
-
     public static int getRandomInt() {
         int lowerBound = 1;
         int upperBound = 100;

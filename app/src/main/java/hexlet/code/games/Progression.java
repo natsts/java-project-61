@@ -15,7 +15,9 @@ public class Progression {
         String description = "What number is missing in the progression?";
         String[][] array = new String[NUMBER_OF_ROUND][2];
         for (var i = 0; i < NUMBER_OF_ROUND; i++) {
-            generateProgression();
+            int firstNumber = getRandomInt();
+            int difference = getRandomInt();
+            generateProgression(firstNumber, difference);
             array[i][QUESTION] = generateQuestion();
             array[i][CORRECT_ANSWER] = correct;
         }
@@ -23,10 +25,7 @@ public class Progression {
     }
 
 
-    public static void generateProgression() {
-
-        int firstNumber = getRandomInt();
-        int difference = getRandomInt();
+    public static void generateProgression(int firstNumber, int difference) {
 
         NUMBERS[0] = firstNumber;
 
