@@ -4,8 +4,10 @@ import java.util.StringJoiner;
 import static hexlet.code.Engine.NUMBER_OF_ROUND;
 import static hexlet.code.Engine.QUESTION;
 import static hexlet.code.Engine.CORRECT_ANSWER;
+import static hexlet.code.Utils.*;
+
 public class Progression {
-    private static final int LENGTH_OF_PROGRESSION = (int) (Math.random() * ((10 - 5) + 1)) + 5;
+    private static final int LENGTH_OF_PROGRESSION = getLengthOfProgression();
     private static final int[] NUMBERS = new int[LENGTH_OF_PROGRESSION];
     private static String correct;
     public static void progression() {
@@ -22,8 +24,8 @@ public class Progression {
 
     public static void generateProgression() {
 
-        int firstNumber = (int) (Math.random() * (10 + 1));
-        int difference = (int) ((Math.random() + 1) * (10 + 1));
+        int firstNumber = getRandomInt();
+        int difference = getRandomIntFromOne();
 
         NUMBERS[0] = firstNumber;
 

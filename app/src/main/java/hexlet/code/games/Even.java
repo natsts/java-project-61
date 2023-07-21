@@ -3,6 +3,7 @@ import hexlet.code.Engine;
 import static hexlet.code.Engine.NUMBER_OF_ROUND;
 import static hexlet.code.Engine.QUESTION;
 import static hexlet.code.Engine.CORRECT_ANSWER;
+import static hexlet.code.Utils.getRandomInt;
 
 public class Even {
     public static void even() {
@@ -10,7 +11,7 @@ public class Even {
         String[][] array = new String[NUMBER_OF_ROUND][2];
 
         for (var i = 0; i < NUMBER_OF_ROUND; i++) {
-            int random = (int) (Math.random() * (100 + 1));
+            int random = getRandomInt();
             array[i][QUESTION] = "Question: " + random;
             array[i][CORRECT_ANSWER] = getCorrectAnswer(random);
         }

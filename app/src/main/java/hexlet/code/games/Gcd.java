@@ -3,6 +3,7 @@ import hexlet.code.Engine;
 import static hexlet.code.Engine.NUMBER_OF_ROUND;
 import static hexlet.code.Engine.QUESTION;
 import static hexlet.code.Engine.CORRECT_ANSWER;
+import static hexlet.code.Utils.getRandomInt;
 
 public class Gcd {
     public static void gcd() {
@@ -10,8 +11,8 @@ public class Gcd {
         String[][] array = new String[NUMBER_OF_ROUND][2];
 
         for (var i = 0; i < NUMBER_OF_ROUND; i++) {
-            int x = (int) (Math.random() * (100 + 1));
-            int y = (int) (Math.random() * (100 + 1));
+            int x = getRandomInt();
+            int y = getRandomInt();
             int result = findDivisor(x, y);
             array[i][QUESTION] = "Question: " + x + " " + y;
             array[i][CORRECT_ANSWER] = Integer.toString(result);

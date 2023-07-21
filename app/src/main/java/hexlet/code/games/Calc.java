@@ -3,6 +3,7 @@ import hexlet.code.Engine;
 import static hexlet.code.Engine.NUMBER_OF_ROUND;
 import static hexlet.code.Engine.QUESTION;
 import static hexlet.code.Engine.CORRECT_ANSWER;
+import static hexlet.code.Utils.getRandomInt;
 
 public class Calc {
     public static void calculate() {
@@ -10,10 +11,10 @@ public class Calc {
         String[][] array = new String[NUMBER_OF_ROUND][2];
 
         for (var i = 0; i < NUMBER_OF_ROUND; i++) {
-            int x = (int) (Math.random() * (100 + 1));
-            int y = (int) (Math.random() * (100 + 1));
+            int x = getRandomInt();
+            int y = getRandomInt();
             String operator = generateOperator();
-            int result = getCalculate(x, y, operator);
+            int result = calculate(x, y, operator);
             array[i][QUESTION] = "Question: " + x + " " + operator + " " + y;
             array[i][CORRECT_ANSWER] = Integer.toString(result);
         }
@@ -25,12 +26,12 @@ public class Calc {
         return operators[n];
     }
 
-    public static int getCalculate(int x, int y, String operator) {
+    public static int calculate(int x, int y, String operator) {
         return switch (operator) {
             case ("+") -> x + y;
             case ("-") -> x - y;
             case ("*") -> x * y;
-            default -> 1;
+            default -> throw new RuntimeException("Operator not found");
         };
     }
 }
