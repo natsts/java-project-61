@@ -19,6 +19,7 @@ public class Progression {
         Engine.generalGameLogic(array, description);
     }
 
+
     public static void generateProgression() {
 
         int firstNumber = (int) (Math.random() * (10 + 1));
