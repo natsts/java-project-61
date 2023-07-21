@@ -13,7 +13,7 @@ public class Gcd {
             int x = (int) (Math.random() * (100 + 1));
             int y = (int) (Math.random() * (100 + 1));
             int result = findDivisor(x, y);
-            array[i][QUESTION] = x + " " + y;
+            array[i][QUESTION] = "Question: " + x + " " + y;
             array[i][CORRECT_ANSWER] = Integer.toString(result);
         }
         Engine.generalGameLogic(array, description);
