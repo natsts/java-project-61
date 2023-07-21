@@ -1,13 +1,25 @@
 package hexlet.code;
 
+import java.util.Random;
+
 public class Utils {
 
+    public final int to = 100;
+
     public static int getRandomInt() {
-        return (int) ((Math.random() + 1) * (100 + 1));
+        int lowerBound = 1;
+        int upperBound = 100;
+        Random random = new Random();
+        int randomNumber = random.nextInt(lowerBound, upperBound);
+        return randomNumber;
     }
 
     //Длина прогрессии [5;10]
     public static int getLengthOfProgression() {
-        return (int) (Math.random() * ((10 - 5) + 1)) + 5;
+        int lowerBound = 5;
+        int upperBound = 10;
+        Random random = new Random();
+        int randomNumber = random.nextInt(lowerBound, upperBound);
+        return randomNumber;
     }
 }

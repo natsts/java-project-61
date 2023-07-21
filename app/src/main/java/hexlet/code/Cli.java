@@ -1,8 +1,8 @@
 package hexlet.code;
 import java.util.Scanner;
 public class Cli {
-    public static String userName;
-    public static Scanner scanner = new Scanner(System.in);
+    private static String userName;
+    private static final Scanner scanner = new Scanner(System.in);
     public static void helloUser() {
         System.out.print(
                 "Welcome to the Brain Games!"
