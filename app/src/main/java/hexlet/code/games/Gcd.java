@@ -23,6 +23,11 @@ public class Gcd {
         int min = Math.min(x, y);
         int max = Math.max(x, y);
         int result = 1;
+
+        if (y == 0 || x == 0) {
+            throw new RuntimeException("Can't divide by zero");
+        }
+
         while (min > 1) {
             result = max % min;
             max = min;
