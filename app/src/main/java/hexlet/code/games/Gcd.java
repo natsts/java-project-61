@@ -11,8 +11,8 @@ public class Gcd {
         String[][] array = new String[NUMBER_OF_ROUND][2];
 
         for (var i = 0; i < NUMBER_OF_ROUND; i++) {
-            int x = getRandomInt();
-            int y = getRandomInt();
+            int x = getRandomInt(1, 100);
+            int y = getRandomInt(1, 100);
             int result = findDivisor(x, y);
             array[i][QUESTION] = x + " " + y;
             array[i][CORRECT_ANSWER] = Integer.toString(result);

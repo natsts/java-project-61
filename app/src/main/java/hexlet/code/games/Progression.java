@@ -8,15 +8,15 @@ import static hexlet.code.Utils.getLengthOfProgression;
 import static hexlet.code.Utils.getRandomInt;
 
 public class Progression {
-    private static final int LENGTH_OF_PROGRESSION = getLengthOfProgression();
+    private static final int LENGTH_OF_PROGRESSION = getLengthOfProgression(5, 10);
     private static final int[] NUMBERS = new int[LENGTH_OF_PROGRESSION];
     private static String correct;
     public static void progression() {
         String description = "What number is missing in the progression?";
         String[][] array = new String[NUMBER_OF_ROUND][2];
         for (var i = 0; i < NUMBER_OF_ROUND; i++) {
-            int firstNumber = getRandomInt();
-            int difference = getRandomInt();
+            int firstNumber = getRandomInt(1, 100);
+            int difference = getRandomInt(1, 100);
             generateProgression(firstNumber, difference);
             array[i][QUESTION] = generateQuestion();
             array[i][CORRECT_ANSWER] = correct;

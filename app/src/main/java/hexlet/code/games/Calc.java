@@ -11,8 +11,8 @@ public class Calc {
         String[][] array = new String[NUMBER_OF_ROUND][2];
 
         for (var i = 0; i < NUMBER_OF_ROUND; i++) {
-            int x = getRandomInt();
-            int y = getRandomInt();
+            int x = getRandomInt(1, 100);
+            int y = getRandomInt(1, 100);
             String operator = generateOperator();
             int result = calculate(x, y, operator);
             array[i][QUESTION] = x + " " + operator + " " + y;

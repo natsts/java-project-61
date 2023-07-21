@@ -12,7 +12,7 @@ public class Prime {
         String[][] array = new String[NUMBER_OF_ROUND][2];
 
         for (var i = 0; i < NUMBER_OF_ROUND; i++) {
-            int number = getRandomInt();
+            int number = getRandomInt(1, 100);
             array[i][QUESTION] = String.valueOf(number);
             array[i][CORRECT_ANSWER] = getCorrectAnswer(number);
         }

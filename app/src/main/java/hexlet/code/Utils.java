@@ -3,18 +3,14 @@ import java.util.Random;
 
 public class Utils {
 
-    public static int getRandomInt() {
-        int lowerBound = 1;
-        int upperBound = 100;
+    public static int getRandomInt(int lowerBound, int upperBound) {
         Random random = new Random();
         int randomNumber = random.nextInt(lowerBound, upperBound);
         return randomNumber;
     }
 
     //Длина прогрессии [5;10]
-    public static int getLengthOfProgression() {
-        int lowerBound = 5;
-        int upperBound = 10;
+    public static int getLengthOfProgression(int lowerBound, int upperBound) {
         Random random = new Random();
         int randomNumber = random.nextInt(lowerBound, upperBound);
         return randomNumber;
