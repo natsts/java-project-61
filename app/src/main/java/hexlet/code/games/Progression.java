@@ -8,8 +8,8 @@ import static hexlet.code.Utils.getLengthOfProgression;
 import static hexlet.code.Utils.getRandomInt;
 
 public class Progression {
-    private static final int PROGRESSION_MIN_SIZE = 5;
-    private static final int PROGRESSION_MAX_SIZE = 10;
+    private static final int PROGRESSION_MIN_SIZE = 1;
+    private static final int PROGRESSION_MAX_SIZE = 100;
     private static final String REPLACEMENT = "..";
     private static final int LENGTH_OF_PROGRESSION = getLengthOfProgression(PROGRESSION_MIN_SIZE, PROGRESSION_MAX_SIZE);
     private static final int[] NUMBERS = new int[LENGTH_OF_PROGRESSION];
@@ -19,8 +19,8 @@ public class Progression {
         String[][] array = new String[NUMBER_OF_ROUND][2];
 
         for (var i = 0; i < NUMBER_OF_ROUND; i++) {
-            int firstNumber = getRandomInt(1, 100);
-            int difference = getRandomInt(1, 100);
+            int firstNumber = getRandomInt(PROGRESSION_MIN_SIZE, PROGRESSION_MAX_SIZE);
+            int difference = getRandomInt(PROGRESSION_MIN_SIZE, PROGRESSION_MAX_SIZE);
             generateProgression(firstNumber, difference);
             array[i][QUESTION] = generateQuestion();
             array[i][CORRECT_ANSWER] = correct;
