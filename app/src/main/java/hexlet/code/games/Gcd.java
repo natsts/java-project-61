@@ -26,8 +26,8 @@ public class Gcd {
         int max = Math.max(x, y);
         int result = 1;
 
-        if (y == 0 || x == 0) {
-            throw new RuntimeException("Can't divide by zero");
+        if (min == 0) {
+            throw new RuntimeException("Arithmetic exception");
         }
 
         while (min > 1) {
