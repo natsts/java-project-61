@@ -8,6 +8,7 @@ import static hexlet.code.Utils.getRandomInt;
 public class Gcd {
     private static final int PROGRESSION_MIN_SIZE = 1;
     private static final int PROGRESSION_MAX_SIZE = 100;
+
     public static void gcd() {
         String description = "Find the greatest common divisor of given numbers.";
         String[][] array = new String[NUMBER_OF_ROUND][2];
@@ -21,7 +22,17 @@ public class Gcd {
         }
         Engine.generalGameLogic(array, description);
     }
+
+    public static int findDivisor(int first, int second) {
+        if (second == 0) {
+            return first;
+        }
+        return findDivisor(second, first % second);
+    }
+}
+    /*
     public static int findDivisor(int x, int y) {
+
         int min = Math.min(x, y);
         int max = Math.max(x, y);
         int result = 1;
@@ -36,8 +47,10 @@ public class Gcd {
             min = result;
             if (max % min == 0) {
                 return min;
+            } else {
+                throw new RuntimeException("Arithmetic exception");
             }
         }
         return result;
     }
-}
+   */
