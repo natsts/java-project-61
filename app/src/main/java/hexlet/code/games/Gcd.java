@@ -26,7 +26,7 @@ public class Gcd {
         int max = Math.max(x, y);
         int result = 1;
 
-        if (min == 0) {
+        if (min == 0 || max == 0) {
             throw new RuntimeException("Arithmetic exception");
         }
 
