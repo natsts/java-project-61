@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class Cli {
     private static String userName;
-    private static final Scanner scanner = new Scanner(System.in);
     public static void helloUser() {
+        Scanner scanner = new Scanner(System.in);
         System.out.print(
                 "Welcome to the Brain Games!"
                         +
