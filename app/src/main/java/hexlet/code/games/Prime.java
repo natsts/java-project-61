@@ -3,17 +3,15 @@ import hexlet.code.Engine;
 import static hexlet.code.Engine.NUMBER_OF_ROUND;
 import static hexlet.code.Engine.QUESTION;
 import static hexlet.code.Engine.CORRECT_ANSWER;
-import static hexlet.code.Utils.getRandomInt;
+import static hexlet.code.Utils.getDefaultRandomInt;
 
 public class Prime {
-    private static final int PROGRESSION_MIN_SIZE = 1;
-    private static final int PROGRESSION_MAX_SIZE = 100;
     public static void prime() {
         String description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         String[][] array = new String[NUMBER_OF_ROUND][2];
 
         for (var i = 0; i < NUMBER_OF_ROUND; i++) {
-            int number = getRandomInt(PROGRESSION_MIN_SIZE, PROGRESSION_MAX_SIZE);
+            int number = getDefaultRandomInt();
             array[i][QUESTION] = String.valueOf(number);
             array[i][CORRECT_ANSWER] = getCorrectAnswer(number);
         }

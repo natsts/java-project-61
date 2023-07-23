@@ -3,18 +3,16 @@ import hexlet.code.Engine;
 import static hexlet.code.Engine.NUMBER_OF_ROUND;
 import static hexlet.code.Engine.QUESTION;
 import static hexlet.code.Engine.CORRECT_ANSWER;
-import static hexlet.code.Utils.getRandomInt;
+import static hexlet.code.Utils.getDefaultRandomInt;
 
 public class Calc {
-    private static final int PROGRESSION_MIN_SIZE = 1;
-    private static final int PROGRESSION_MAX_SIZE = 100;
     public static void calculate() {
         String description = "What is the result of the expression?";
         String[][] array = new String[NUMBER_OF_ROUND][2];
 
         for (var i = 0; i < NUMBER_OF_ROUND; i++) {
-            int x = getRandomInt(PROGRESSION_MIN_SIZE, PROGRESSION_MAX_SIZE);
-            int y = getRandomInt(PROGRESSION_MIN_SIZE, PROGRESSION_MAX_SIZE);
+            int x = getDefaultRandomInt();
+            int y = getDefaultRandomInt();
             String operator = generateOperator();
             int result = calculate(x, y, operator);
             array[i][QUESTION] = x + " " + operator + " " + y;
