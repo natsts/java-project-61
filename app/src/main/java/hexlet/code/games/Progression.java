@@ -3,57 +3,41 @@ import hexlet.code.Engine;
 import static hexlet.code.Engine.QUESTION;
 import static hexlet.code.Engine.CORRECT_ANSWER;
 import static hexlet.code.Engine.NUMBER_OF_ROUND;
+import static hexlet.code.Utils.getDefaultRandomInt;
 import static hexlet.code.Utils.getRandomInt;
 
 public class Progression {
     private static final int PROGRESSION_MIN_SIZE = 5;
     private static final int PROGRESSION_MAX_SIZE = 10;
-    private static final String REPLACEMENT = "..";
     private static final int LENGTH_OF_PROGRESSION = getRandomInt(PROGRESSION_MIN_SIZE, PROGRESSION_MAX_SIZE);
-    private static final int[] NUMBERS = new int[LENGTH_OF_PROGRESSION];
 
     public static void progression() {
         String description = "What number is missing in the progression?";
-        String[][] array = new String[NUMBER_OF_ROUND][2];
+        String[][] roundData = new String[NUMBER_OF_ROUND][2];
 
         for (var i = 0; i < NUMBER_OF_ROUND; i++) {
-            int firstNumber = getRandomInt(PROGRESSION_MIN_SIZE, PROGRESSION_MAX_SIZE);
-            int difference = getRandomInt(PROGRESSION_MIN_SIZE, PROGRESSION_MAX_SIZE);
-            int indexOfHideElement = (int) (Math.random() * LENGTH_OF_PROGRESSION);
-            generateProgression(firstNumber, difference);
+            String[] progressionArray = new String[LENGTH_OF_PROGRESSION];
+            String hiddenElement = "";
 
-            array[i][QUESTION] = createQuestion(indexOfHideElement);
-            array[i][CORRECT_ANSWER] = getCorrectAnswer(indexOfHideElement);
-        }
-        Engine.generalGameLogic(array, description);
-    }
+            var current = getDefaultRandomInt();
+            var difference = getDefaultRandomInt();
+            int hiddenElementIndex = (int) (Math.random() * LENGTH_OF_PROGRESSION);
 
+            for (var k = 0; k < LENGTH_OF_PROGRESSION; k++) {
 
-    public static void generateProgression(int firstNumber, int difference) {
+                progressionArray[k] = String.valueOf(current);
+                current = current + difference;
 
-        NUMBERS[0] = firstNumber;
-
-        for (var i = 1; i < LENGTH_OF_PROGRESSION; i++) {
-            NUMBERS[i] = NUMBERS[i - 1] + difference;
-        }
-    }
-
-    public static String createQuestion(int indexOfHideElement) {
-        var result = new StringBuilder();
-
-        for (int number : NUMBERS) {
-            if (number != NUMBERS[indexOfHideElement]) {
-                result.append(number);
-                result.append(" ");
-            } else {
-                result.append(REPLACEMENT);
-                result.append(" ");
+                if (progressionArray[k].equals(progressionArray[hiddenElementIndex])) {
+                    hiddenElement = progressionArray[hiddenElementIndex];
+                    progressionArray[hiddenElementIndex] = "..";
+                }
             }
-        }
-        return result.toString();
-    }
+            var question = String.join(" ", progressionArray);
 
-    public static String getCorrectAnswer(int indexOfHideElement) {
-        return Integer.toString(NUMBERS[indexOfHideElement]);
+            roundData[i][QUESTION] = question;
+            roundData[i][CORRECT_ANSWER] = hiddenElement;
+        }
+        Engine.generalGameLogic(roundData, description);
     }
 }

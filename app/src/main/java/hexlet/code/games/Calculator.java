@@ -5,20 +5,20 @@ import static hexlet.code.Engine.QUESTION;
 import static hexlet.code.Engine.CORRECT_ANSWER;
 import static hexlet.code.Utils.getDefaultRandomInt;
 
-public class Calc {
-    public static void calculate() {
+public class Calculator {
+    public static void getCalculate() {
         String description = "What is the result of the expression?";
-        String[][] array = new String[NUMBER_OF_ROUND][2];
+        String[][] roundData = new String[NUMBER_OF_ROUND][2];
 
         for (var i = 0; i < NUMBER_OF_ROUND; i++) {
             int x = getDefaultRandomInt();
             int y = getDefaultRandomInt();
             String operator = generateOperator();
             int result = calculate(x, y, operator);
-            array[i][QUESTION] = x + " " + operator + " " + y;
-            array[i][CORRECT_ANSWER] = Integer.toString(result);
+            roundData[i][QUESTION] = x + " " + operator + " " + y;
+            roundData[i][CORRECT_ANSWER] = Integer.toString(result);
         }
-        Engine.generalGameLogic(array, description);
+        Engine.generalGameLogic(roundData, description);
     }
     public static String generateOperator() {
         String[] operators = {"+", "-", "*"};

@@ -6,16 +6,16 @@ import static hexlet.code.Engine.CORRECT_ANSWER;
 import static hexlet.code.Utils.getDefaultRandomInt;
 
 public class Prime {
-    public static void prime() {
+    public static void isPrimeNumber() {
         String description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        String[][] array = new String[NUMBER_OF_ROUND][2];
+        String[][] roundData = new String[NUMBER_OF_ROUND][2];
 
         for (var i = 0; i < NUMBER_OF_ROUND; i++) {
             int number = getDefaultRandomInt();
-            array[i][QUESTION] = String.valueOf(number);
-            array[i][CORRECT_ANSWER] = getCorrectAnswer(number);
+            roundData[i][QUESTION] = String.valueOf(number);
+            roundData[i][CORRECT_ANSWER] = getCorrectAnswer(number);
         }
-        Engine.generalGameLogic(array, description);
+        Engine.generalGameLogic(roundData, description);
     }
 
     public static boolean isPrime(int number) {
