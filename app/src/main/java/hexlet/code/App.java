@@ -1,11 +1,14 @@
 package hexlet.code;
-import hexlet.code.games.*;
+import hexlet.code.games.Progression;
+import hexlet.code.games.Even;
+import hexlet.code.games.Prime;
+import hexlet.code.games.Gcd;
 import hexlet.code.games.Calculator;
-
 import java.util.Scanner;
+
 class App {
-    private static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         System.out.println(
                 """
                         Please enter the game number and press Enter.
