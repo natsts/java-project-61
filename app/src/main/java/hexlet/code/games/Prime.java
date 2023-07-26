@@ -6,7 +6,7 @@ import static hexlet.code.Engine.CORRECT_ANSWER;
 import static hexlet.code.Utils.getDefaultRandomInt;
 
 public class Prime {
-    public static void isPrimeNumber() {
+    public static void getPrimeNumber() {
         String description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         String[][] roundData = new String[NUMBER_OF_ROUND][2];
 

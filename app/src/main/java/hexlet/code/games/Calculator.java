@@ -14,7 +14,7 @@ public class Calculator {
             int x = getDefaultRandomInt();
             int y = getDefaultRandomInt();
             String operator = generateOperator();
-            int result = calculate(x, y, operator);
+            int result = getResult(x, y, operator);
             roundData[i][QUESTION] = x + " " + operator + " " + y;
             roundData[i][CORRECT_ANSWER] = Integer.toString(result);
         }
@@ -26,7 +26,7 @@ public class Calculator {
         return operators[n];
     }
 
-    public static int calculate(int x, int y, String operator) {
+    public static int getResult(int x, int y, String operator) {
         return switch (operator) {
             case ("+") -> x + y;
             case ("-") -> x - y;

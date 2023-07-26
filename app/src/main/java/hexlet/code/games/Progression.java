@@ -11,7 +11,7 @@ public class Progression {
     private static final int PROGRESSION_MAX_SIZE = 10;
     private static final int LENGTH_OF_PROGRESSION = getRandomInt(PROGRESSION_MIN_SIZE, PROGRESSION_MAX_SIZE);
 
-    public static void progression() {
+    public static void generateProgression() {
         String description = "What number is missing in the progression?";
         String[][] roundData = new String[NUMBER_OF_ROUND][2];
 

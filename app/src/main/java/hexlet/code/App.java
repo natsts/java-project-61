@@ -27,8 +27,8 @@ class App {
             case "2" -> Even.getEvenNumber();
             case "3" -> Calculator.getCalculate();
             case "4" -> Gcd.getTheLargestDivisor();
-            case "5" -> Progression.progression();
-            case "6" -> Prime.isPrimeNumber();
+            case "5" -> Progression.generateProgression();
+            case "6" -> Prime.getPrimeNumber();
             case "0" -> scanner.close();
             default -> {
                 System.out.println("Goodbye! Have a nice day:)");
