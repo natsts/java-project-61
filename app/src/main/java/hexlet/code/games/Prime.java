@@ -20,7 +20,9 @@ public class Prime {
 
     public static boolean isPrime(int number) {
 
-        if (number < 2) return false;
+        if (number < 2) {
+            return false;
+        }
 
         for (var i = 2; i < number / 2; i++) {
 
