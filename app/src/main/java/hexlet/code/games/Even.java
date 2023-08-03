@@ -6,7 +6,7 @@ import static hexlet.code.Engine.CORRECT_ANSWER;
 import static hexlet.code.Utils.getDefaultRandomInt;
 
 public class Even {
-    public static void getEvenNumber() {
+    public static void playEvenNumber() {
         String description = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         String[][] roundData = new String[NUMBER_OF_ROUND][2];
 
@@ -15,7 +15,7 @@ public class Even {
             roundData[i][QUESTION] = String.valueOf(random);
             roundData[i][CORRECT_ANSWER] = getCorrectAnswer(random);
         }
-        Engine.generalGameLogic(roundData, description);
+        Engine.runGame(roundData, description);
     }
     public static boolean isEven(int number) {
         return number % 2 == 0;

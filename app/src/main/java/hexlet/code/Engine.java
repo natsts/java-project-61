@@ -6,10 +6,15 @@ public class Engine {
     public static final int QUESTION = 0;
     public static final int CORRECT_ANSWER = 1;
 
-    public static void generalGameLogic(String[][] gameData, String description) {
+    public static void runGame(String[][] gameData, String description) {
 
-        Cli.helloUser();
         Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Welcome to the Brain Games!" + "\nMay I have your name? ");
+
+        String userName = scanner.next();
+        System.out.println("Hello, " + userName + "!");
+
         System.out.println(description);
 
         for (var i = 0; i < NUMBER_OF_ROUND;) {
@@ -23,10 +28,10 @@ public class Engine {
                 i++;
             } else {
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '"
-                        + gameData[i][CORRECT_ANSWER] + "'.\nLet's try again, " + Cli.getUserName() + "!");
+                        + gameData[i][CORRECT_ANSWER] + "'.\nLet's try again, " + userName + "!");
                 return;
             }
         }
-        System.out.println("Congratulations, " + Cli.getUserName() + "!");
+        System.out.println("Congratulations, " + userName + "!");
     }
 }

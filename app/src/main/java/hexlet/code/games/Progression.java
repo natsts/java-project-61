@@ -11,33 +11,38 @@ public class Progression {
     private static final int PROGRESSION_MAX_SIZE = 10;
     private static final int LENGTH_OF_PROGRESSION = getRandomInt(PROGRESSION_MIN_SIZE, PROGRESSION_MAX_SIZE);
 
-    public static void generateProgression() {
+    public static void getProgression() {
         String description = "What number is missing in the progression?";
         String[][] roundData = new String[NUMBER_OF_ROUND][2];
 
         for (var i = 0; i < NUMBER_OF_ROUND; i++) {
-            String[] progressionArray = new String[LENGTH_OF_PROGRESSION];
-            String hiddenElement = "";
 
-            var current = getDefaultRandomInt();
-            var difference = getDefaultRandomInt();
-            int hiddenElementIndex = (int) (Math.random() * LENGTH_OF_PROGRESSION);
+            int hiddenElementIndex = getRandomInt(0, LENGTH_OF_PROGRESSION);
 
-            for (var k = 0; k < LENGTH_OF_PROGRESSION; k++) {
+            String[] progressionArray = generateProgression();
+            String hiddenElement = progressionArray[hiddenElementIndex];
+            progressionArray[hiddenElementIndex] = "..";
 
-                progressionArray[k] = String.valueOf(current);
-                current = current + difference;
-
-                if (progressionArray[k].equals(progressionArray[hiddenElementIndex])) {
-                    hiddenElement = progressionArray[hiddenElementIndex];
-                    progressionArray[hiddenElementIndex] = "..";
-                }
-            }
             var question = String.join(" ", progressionArray);
 
             roundData[i][QUESTION] = question;
             roundData[i][CORRECT_ANSWER] = hiddenElement;
         }
-        Engine.generalGameLogic(roundData, description);
+        Engine.runGame(roundData, description);
+    }
+
+    public static String[] generateProgression() {
+
+        String[] progressionArray = new String[LENGTH_OF_PROGRESSION];
+
+        int current = getDefaultRandomInt();
+        int difference = getDefaultRandomInt();
+
+        for (var i = 0; i < LENGTH_OF_PROGRESSION; i++) {
+
+            progressionArray[i] = String.valueOf(current);
+            current += difference;
+        }
+        return progressionArray;
     }
 }

@@ -18,7 +18,7 @@ public class Gcd {
             roundData[i][QUESTION] = x + " " + y;
             roundData[i][CORRECT_ANSWER] = Integer.toString(result);
         }
-        Engine.generalGameLogic(roundData, description);
+        Engine.runGame(roundData, description);
     }
 
     public static int findDivisor(int first, int second) {

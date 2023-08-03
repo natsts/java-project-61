@@ -4,6 +4,7 @@ import static hexlet.code.Engine.NUMBER_OF_ROUND;
 import static hexlet.code.Engine.QUESTION;
 import static hexlet.code.Engine.CORRECT_ANSWER;
 import static hexlet.code.Utils.getDefaultRandomInt;
+import static hexlet.code.Utils.getRandomInt;
 
 public class Calculator {
     public static void getCalculate() {
@@ -18,11 +19,11 @@ public class Calculator {
             roundData[i][QUESTION] = x + " " + operator + " " + y;
             roundData[i][CORRECT_ANSWER] = Integer.toString(result);
         }
-        Engine.generalGameLogic(roundData, description);
+        Engine.runGame(roundData, description);
     }
     public static String generateOperator() {
         String[] operators = {"+", "-", "*"};
-        int n = (int) Math.floor(Math.random() * operators.length);
+        int n = getRandomInt(0, operators.length);
         return operators[n];
     }
 

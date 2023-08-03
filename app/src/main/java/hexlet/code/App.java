@@ -24,11 +24,11 @@ class App {
 
         switch (choice) {
             case "1" -> Cli.helloUser();
-            case "2" -> Even.getEvenNumber();
+            case "2" -> Even.playEvenNumber();
             case "3" -> Calculator.getCalculate();
             case "4" -> Gcd.getTheLargestDivisor();
-            case "5" -> Progression.generateProgression();
-            case "6" -> Prime.getPrimeNumber();
+            case "5" -> Progression.getProgression();
+            case "6" -> Prime.playPrimeNumber();
             case "0" -> scanner.close();
             default -> {
                 System.out.println("Goodbye! Have a nice day:)");
